@@ -739,7 +739,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       SFX.playClick();
-      const name = document.getElementById('loginName').value.trim();
+      let name = document.getElementById('loginName').value.trim() + '_LAMA';
       const age = document.getElementById('loginAge').value.trim();
 
       loginSpinner.classList.remove('hidden');
@@ -789,7 +789,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       SFX.playClick();
 
-      const name = document.getElementById('obName').value;
+      let name = document.getElementById('obName').value.trim() + '_LAMA';
       const age = document.getElementById('obAge').value;
       const gender = document.getElementById('obGender').value;
       const country = document.getElementById('obCountry').value;
