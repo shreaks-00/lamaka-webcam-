@@ -190,7 +190,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 16px 0;
+  padding: 8px 0;
   z-index: 100;
   background: rgba(8, 9, 13, 0.8);
   backdrop-filter: blur(12px);
@@ -211,13 +211,20 @@ body {
   gap: 10px;
 }
 
+/* Logo icon — constrained to 60px inside the nav bar */
 .logo-svg {
-  width: 54px;
-  height: 54px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   filter: drop-shadow(0 0 5px rgba(197, 168, 128, 0.4));
-  /* animation: float 4s infinite ease-in-out;?? */
 }
+
+/* Mobile nav buttons — hidden on desktop */
+.mobile-nav-btns {
+  display: none;
+}
+
+
 
 .logo-text {
   font-family: var(--font-heading);
@@ -1297,6 +1304,7 @@ body {
 
 /* ── Mobile (≤768px) ──────────────────────────────── */
 @media (max-width: 768px) {
+
   /* Container padding */
   .container {
     padding: 0 16px;
@@ -1304,7 +1312,7 @@ body {
 
   /* Header */
   .app-header {
-    padding: 10px 0;
+    padding: 6px 0;
   }
 
   .header-container {
@@ -1312,17 +1320,38 @@ body {
   }
 
   .logo-svg {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
 
   .logo-text {
     font-size: 18px;
   }
 
-  /* Hide the desktop nav */
+  /* Hide the desktop nav on mobile */
   .nav-links {
     display: none;
+  }
+
+  /* Show mobile nav buttons */
+  .mobile-nav-btns {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mobile-login-btn,
+  .mobile-signup-btn {
+    padding: 7px 14px !important;
+    font-size: 11px !important;
+    border-radius: 9999px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    white-space: nowrap;
   }
 
   /* Auth buttons (Login) — keep but shrink */
@@ -1421,7 +1450,7 @@ body {
     gap: 20px;
   }
 
-  .seo-accordion > summary {
+  .seo-accordion>summary {
     padding: 16px 20px;
     font-size: 14px;
   }
@@ -2126,7 +2155,7 @@ body {
 .spinner {
   width: 18px;
   height: 18px;
-  border: 3px solid rgba(0,0,0,0.1);
+  border: 3px solid rgba(0, 0, 0, 0.1);
   border-left-color: #000;
   border-radius: 50%;
   animation: spin 1s linear infinite;
@@ -2137,7 +2166,9 @@ body {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ==========================================================================
@@ -2177,7 +2208,7 @@ body {
   border-color: rgba(197, 168, 128, 0.3);
 }
 
-.seo-accordion > summary {
+.seo-accordion>summary {
   padding: 22px 28px;
   font-family: var(--font-heading);
   font-size: 16px;
@@ -2192,9 +2223,11 @@ body {
   transition: background 0.2s ease;
 }
 
-.seo-accordion > summary::-webkit-details-marker { display: none; }
+.seo-accordion>summary::-webkit-details-marker {
+  display: none;
+}
 
-.seo-accordion > summary::after {
+.seo-accordion>summary::after {
   content: '+';
   font-size: 24px;
   font-weight: 300;
@@ -2205,11 +2238,11 @@ body {
   margin-left: 16px;
 }
 
-.seo-accordion[open] > summary::after {
+.seo-accordion[open]>summary::after {
   content: '−';
 }
 
-.seo-accordion > summary:hover {
+.seo-accordion>summary:hover {
   background: rgba(197, 168, 128, 0.04);
 }
 
@@ -2225,10 +2258,18 @@ body {
   margin-bottom: 14px;
 }
 
-.seo-accordion-content p:last-child { margin-bottom: 0; }
+.seo-accordion-content p:last-child {
+  margin-bottom: 0;
+}
 
-.seo-accordion-content strong { color: var(--text-primary); }
-.seo-accordion-content em { color: var(--text-gold); font-style: normal; }
+.seo-accordion-content strong {
+  color: var(--text-primary);
+}
+
+.seo-accordion-content em {
+  color: var(--text-gold);
+  font-style: normal;
+}
 
 /* ==========================================================================
    SEO Content Section
@@ -2236,7 +2277,7 @@ body {
 .seo-section {
   padding: 80px 20px;
   background: var(--bg-card);
-  border-top: 1px solid rgba(197,168,128,0.1);
+  border-top: 1px solid rgba(197, 168, 128, 0.1);
 }
 
 .seo-header {
@@ -2331,6 +2372,7 @@ body {
   padding: 5px;
   line-height: 1;
 }
+
 .ob-close-btn:hover {
   color: #ff5252;
 }
@@ -2346,6 +2388,7 @@ body {
   gap: 10px;
   margin-bottom: 20px;
 }
+
 .ob-logo span {
   font-family: var(--font-heading);
   font-weight: 800;
@@ -2355,14 +2398,16 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .ob-tabs {
   display: flex;
   gap: 0;
   margin-bottom: 24px;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   padding: 4px;
 }
+
 .ob-tab {
   flex: 1;
   padding: 10px 0;
@@ -2377,23 +2422,28 @@ body {
   border-radius: 9px;
   transition: all 0.25s;
 }
+
 .ob-tab.active {
   background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
   color: #0b0d13;
-  box-shadow: 0 2px 10px rgba(197,168,128,0.3);
+  box-shadow: 0 2px 10px rgba(197, 168, 128, 0.3);
 }
+
 .ob-tab:not(.active):hover {
   color: var(--gold-mid);
 }
+
 .ob-form {
   display: block;
 }
+
 .ob-tagline {
   color: var(--text-secondary) !important;
   font-size: 13px !important;
   text-align: center;
   margin-bottom: 20px !important;
 }
+
 .ob-submit-btn {
   width: 100%;
   justify-content: center;
@@ -2401,9 +2451,10 @@ body {
   align-items: center;
   gap: 8px;
 }
+
 .ob-error {
-  background: rgba(255,60,60,0.1);
-  border: 1px solid rgba(255,60,60,0.3);
+  background: rgba(255, 60, 60, 0.1);
+  border: 1px solid rgba(255, 60, 60, 0.3);
   color: #ff6b6b;
   border-radius: 8px;
   padding: 10px 14px;
@@ -2434,9 +2485,11 @@ body {
   transform: translateY(150%);
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 .cookie-banner.show {
   transform: translateY(0);
 }
+
 @media (min-width: 768px) {
   .cookie-banner {
     flex-direction: row;
@@ -2446,25 +2499,30 @@ body {
     margin: 0 auto;
   }
 }
+
 .cookie-text {
   color: var(--text-secondary);
   font-size: 14px;
   line-height: 1.5;
   margin: 0;
 }
+
 .cookie-text a {
   color: var(--gold-primary);
   text-decoration: none;
   font-weight: 600;
 }
+
 .cookie-text a:hover {
   text-decoration: underline;
 }
+
 .cookie-actions {
   display: flex;
   gap: 12px;
   flex-shrink: 0;
 }
+
 .btn-cookie-outline {
   background: transparent;
   border: 1px solid var(--text-muted);
@@ -2476,10 +2534,12 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
+
 .btn-cookie-outline:hover {
   border-color: #fff;
   color: #fff;
 }
+
 .btn-cookie-accept {
   background: var(--gold-primary);
   border: none;
@@ -2491,6 +2551,7 @@ body {
   cursor: pointer;
   transition: opacity 0.2s;
 }
+
 .btn-cookie-accept:hover {
   opacity: 0.9;
 }
