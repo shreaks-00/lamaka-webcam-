@@ -175,7 +175,7 @@
           </div>
           <div class="form-group">
             <label for="loginAge">Age</label>
-            <input type="number" id="loginAge" required min="18" max="120" placeholder="18+" style="height: 48px;">
+            <input type="number" id="loginAge" required min="18" max="100" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="18+" style="height: 48px;">
           </div>
           <div class="ob-error hidden" id="loginError">Name & age not found. Please Sign Up first.</div>
           <button type="submit" class="btn btn-gold-filled ob-submit-btn" id="loginSubmitBtn" style="height: 48px; font-size: 15px; margin-top: 10px;">
