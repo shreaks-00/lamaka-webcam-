@@ -176,7 +176,10 @@
         <form id="onboardingForm" class="ob-form">
           <div class="form-group">
             <label for="obName">Name</label>
-            <input type="text" id="obName" required minlength="5" maxlength="20" pattern="[a-z]+" title="Name must be 5-20 lowercase letters" oninput="this.value = this.value.toLowerCase().replace(/[^a-z]/g, '')" placeholder="How should we call you?">
+            <div style="position: relative; display: flex; align-items: center;">
+              <input type="text" id="obName" required minlength="5" maxlength="20" pattern="[a-z]+" title="Name must be 5-20 lowercase letters" oninput="this.value = this.value.toLowerCase().replace(/[^a-z]/g, '')" placeholder="How should we call you?" style="padding-right: 70px; width: 100%; box-sizing: border-box;">
+              <span style="position: absolute; right: 15px; color: var(--gold-primary, #c5a880); font-weight: bold; pointer-events: none;">_LAMA</span>
+            </div>
           </div>
           <div class="form-group">
             <label for="obAge">Age</label>
