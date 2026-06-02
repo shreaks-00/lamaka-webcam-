@@ -9,6 +9,28 @@ let currentPartner = null;
 let localStream = null;
 let isChatViewActive = false;
 
+// --- Cookie Helpers ---
+function setCookie(name, value, days) {
+  let expires = "";
+  if (days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + encodeURIComponent(value || "") + expires + "; path=/";
+}
+
+function getCookie(name) {
+  const nameEQ = name + "=";
+  const ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+  }
+  return null;
+}
+
 // Animations and Timers
 let particleAnimationId = null;
 let sonarInterval = null;
@@ -667,7 +689,14 @@ function handleUserSendMessage() {
   if (text === '') return;
   
   inputEl.value = '';
-  appendMessage('You', text, 'user');
+  
+  let userName = 'You';
+  const profileStr = getCookie('lamakaProfile');
+  if (profileStr) {
+    try { userName = JSON.parse(profileStr).name; } catch(e){}
+  }
+  
+  appendMessage(userName, text, 'user');
   SFX.playMessageSent();
   
   // Partner response
@@ -746,8 +775,8 @@ document.addEventListener('DOMContentLoaded', () => {
       loginSubmitBtn.disabled = true;
       loginError.classList.add('hidden');
 
-      // 1. Check local storage first (fast path)
-      const savedProfile = localStorage.getItem('lamakaProfile');
+      // 1. Check cookies first (fast path)
+      const savedProfile = getCookie('lamakaProfile');
       if (savedProfile) {
         const profile = JSON.parse(savedProfile);
         if (profile.name.toLowerCase() === name.toLowerCase() && String(profile.age) === age) {
@@ -763,8 +792,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const result = await response.json();
         
         if (result.status === 'found') {
-          // Update local storage and proceed
-          localStorage.setItem('lamakaProfile', JSON.stringify(result.profile));
+          // Update cookie and proceed
+          setCookie('lamakaProfile', JSON.stringify(result.profile), 30);
           window.location.href = 'chat.html';
         } else {
           // Not found
@@ -797,8 +826,8 @@ document.addEventListener('DOMContentLoaded', () => {
       obSpinner.classList.remove('hidden');
       obSubmitBtn.disabled = true;
 
-      // Save profile to localStorage for future logins
-      localStorage.setItem('lamakaProfile', JSON.stringify({ name, age, gender, country }));
+      // Save profile to cookie for future logins
+      setCookie('lamakaProfile', JSON.stringify({ name, age, gender, country }), 30);
 
       try {
         const response = await fetch(GOOGLE_SCRIPT_URL, {
@@ -1008,7 +1037,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Cookie Consent Banner
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
-  if (!localStorage.getItem('lamakaCookieConsent')) {
+  if (!getCookie('lamakaCookieConsent')) {
     const banner = document.createElement('div');
     banner.className = 'cookie-banner';
     banner.innerHTML = `
@@ -1024,13 +1053,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => { banner.classList.add('show'); }, 500);
     
     document.getElementById('cookieAcceptBtn').addEventListener('click', () => {
-      localStorage.setItem('lamakaCookieConsent', 'accepted');
+      setCookie('lamakaCookieConsent', 'accepted', 365);
       banner.classList.remove('show');
       setTimeout(() => banner.remove(), 500);
     });
     
     document.getElementById('cookieDeclineBtn').addEventListener('click', () => {
-      localStorage.setItem('lamakaCookieConsent', 'declined');
+      setCookie('lamakaCookieConsent', 'declined', 365);
       banner.classList.remove('show');
       setTimeout(() => banner.remove(), 500);
     });
