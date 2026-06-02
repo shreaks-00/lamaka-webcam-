@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About LAMAKA – The World's Best Free Random Video Chat Platform</title>
+  <meta name="description" content="Learn about LAMAKA – the premium Omegle alternative redefining random video chat. Discover our mission, story, and commitment to safe, anonymous stranger chat worldwide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About LAMAKA",
+    "description": "LAMAKA is a free random video chat platform – the ultimate Omegle alternative.",
+    "url": "https://lamaka.chat/about"
+  }
+  </script>
+  <style>
+    .static-page {
+      min-height: 100vh;
+      padding: 120px 0 80px;
+    }
+    .static-page .container {
+      max-width: 860px;
+    }
+    .page-hero {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .page-hero-eyebrow {
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .page-hero-title {
+      font-family: var(--font-heading);
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+    .page-hero-subtitle {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .article-body {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .article-section {
+      background: rgba(20,24,35,0.6);
+      border: 1px solid rgba(197,168,128,0.12);
+      border-radius: 16px;
+      padding: 40px 48px;
+      backdrop-filter: blur(8px);
+    }
+    .article-section h2 {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(197,168,128,0.15);
+    }
+    .article-section h2 span { color: var(--gold-primary); }
+    .article-section p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .article-section p:last-child { margin-bottom: 0; }
+    .article-section ul {
+      margin: 16px 0 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .article-section ul li {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+    .article-section ul li::marker { color: var(--gold-primary); }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 28px;
+    }
+    .stat-card {
+      background: rgba(197,168,128,0.05);
+      border: 1px solid rgba(197,168,128,0.15);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #f7e6ce 0%, #d5bd9b 50%, #8e704a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 6px;
+    }
+    .cta-block {
+      text-align: center;
+      padding: 48px;
+      background: linear-gradient(135deg, rgba(197,168,128,0.08) 0%, rgba(197,168,128,0.02) 100%);
+      border: 1px solid rgba(197,168,128,0.2);
+      border-radius: 16px;
+    }
+    .cta-block h2 {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+    .cta-block p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+    }
+    /* Shared header */
+    .static-header {
+      position: fixed; top: 0; left: 0; width: 100%;
+      padding: 16px 0; z-index: 100;
+      background: rgba(8,9,13,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(197,168,128,0.1);
+    }
+    .static-header .container {
+      max-width: 1200px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .static-header .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .static-header .logo img { width: 40px; height: 40px; object-fit: contain; }
+    .static-header .logo span {
+      font-family: var(--font-heading); font-weight: 700; font-size: 20px;
+      background: linear-gradient(135deg, #f7e6ce 0%, #d5bd9b 50%, #8e704a 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .static-header nav { display: flex; gap: 28px; }
+    .static-header nav a {
+      font-family: var(--font-heading); font-size: 14px; color: var(--text-secondary);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .static-header nav a:hover { color: var(--text-gold); }
+    /* footer */
+    .static-footer {
+      background: rgba(8,9,13,0.9);
+      border-top: 1px solid rgba(197,168,128,0.1);
+      padding: 28px 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+    .static-footer a { color: var(--gold-primary); text-decoration: none; margin: 0 12px; }
+    .static-footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header class="static-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="icon.png" alt="LAMAKA Logo">
+      <span>LAMAKA</span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="chat.html">Start Chatting</a>
+      <a href="faq.html">FAQ</a>
+      <a href="safety.html">Safety</a>
+    </nav>
+  </div>
+</header>
+
+<main class="static-page">
+  <div class="container">
+    
+    <div class="page-hero">
+      <p class="page-hero-eyebrow">Our Story</p>
+      <h1 class="page-hero-title">About <span style="background: linear-gradient(135deg,#f7e6ce,#d5bd9b,#8e704a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">LAMAKA</span></h1>
+      <p class="page-hero-subtitle">We're on a mission to redefine how strangers connect. No algorithms that trap you. No feed manipulation. Just raw, real, human-to-human conversation.</p>
+    </div>
+
+    <div class="article-body">
+
+      <div class="article-section">
+        <h2>What is <span>LAMAKA</span>?</h2>
+        <p>LAMAKA is a free, browser-based <strong>random video chat platform</strong> that connects you with real people from around the world in seconds. We are the premier <strong>Omegle alternative</strong> for a new generation — built from the ground up with premium aesthetics, end-to-end security, and a community-first philosophy.</p>
+        <p>Unlike outdated chat roulette platforms plagued by bots, inappropriate content, and clunky interfaces, LAMAKA delivers a <strong>luxury video chat experience</strong> right in your browser. No downloads. No plugins. No account required. Just open, click, and connect.</p>
+        <p>Our matching engine pairs you with new people globally in under three seconds, supporting millions of simultaneous connections. Whether you're looking to make new friends, practice a foreign language, or simply have a spontaneous, meaningful conversation with a stranger — LAMAKA is your herd.</p>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-number">2.1M+</div>
+            <div class="stat-label">Monthly Active Users</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">140+</div>
+            <div class="stat-label">Countries Represented</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">4.9 ★</div>
+            <div class="stat-label">Average User Rating</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-section">
+        <h2>Our <span>Story</span></h2>
+        <p>LAMAKA was born in 2026 from a simple frustration: the world's most popular stranger chat apps had become cesspools of bots, ads, and poor user experience. The original Omegle-era apps had a beautiful core concept — connect two random strangers instantly — but failed their communities through neglect.</p>
+        <p>Our founding team of designers, engineers, and community builders set out to create something genuinely different. We spent months obsessing over every detail — from the soft gold color palette (inspired by premium metal craftsmanship) to the sub-50ms WebRTC connection architecture. We wanted every interaction on LAMAKA to feel like you've just unlocked a VIP lounge.</p>
+        <p>The name "LAMAKA" is a playful nod to the llama — an animal known for being social, surprisingly intelligent, and occasionally dramatic. Much like the best conversations you'll have on our platform.</p>
+      </div>
+
+      <div class="article-section">
+        <h2>Why <span>LAMAKA</span> is Different</h2>
+        <p>The <strong>random video chat</strong> space is crowded, but LAMAKA stands apart on five fundamental pillars:</p>
+        <ul>
+          <li><strong>Premium Design:</strong> We are the only free webcam chat platform with a dark-gold luxury UI. No ads cluttering the screen. No garish banners. Just clean, immersive video — like a private video lounge.</li>
+          <li><strong>Instant Matching:</strong> Our proprietary "Herd Algorithm" connects you to a compatible stranger in under 3 seconds. Filter by gender, region, or interest to find exactly who you're looking for.</li>
+          <li><strong>No Registration Required:</strong> As a true <strong>anonymous chat site</strong>, LAMAKA asks for nothing but your time. No email, no phone number, no data harvesting.</li>
+          <li><strong>AI-Powered Moderation:</strong> Our real-time moderation AI actively scans sessions to prevent inappropriate behavior, keeping LAMAKA the safest platform for <strong>talking to strangers online</strong>.</li>
+          <li><strong>Crystal-Clear Video:</strong> Built on modern WebRTC with adaptive bitrate streaming, LAMAKA delivers HD-quality video chat even on moderate internet connections.</li>
+        </ul>
+      </div>
+
+      <div class="article-section">
+        <h2>Our <span>Mission</span> & Vision</h2>
+        <p>We believe human connection is a fundamental need. In an increasingly isolated world — dominated by algorithm-curated social feeds that only show you what you already agree with — LAMAKA is a radical act of openness. We connect you with someone completely different from you, someone you'd never meet in your daily life, someone who might change your perspective entirely.</p>
+        <p>Our vision is to become the world's most trusted and beloved <strong>stranger video chat platform</strong>. Not the biggest. Not necessarily the most famous. But the one users return to again and again because it feels human, safe, and alive.</p>
+        <p>We're building toward a future where LAMAKA supports verified interest-based communities (book clubs, language exchange, gaming), live group video rooms, and AI-assisted conversation starters — all while maintaining the magic of the random, anonymous, spontaneous connection that makes this category unique.</p>
+      </div>
+
+      <div class="article-section">
+        <h2>Our <span>Commitment</span> to Safety</h2>
+        <p>Safety is not an afterthought at LAMAKA — it's architecture. Every feature decision we make is filtered through a "could this be abused?" lens. Here's how we protect our community:</p>
+        <ul>
+          <li><strong>Zero Data Storage:</strong> We do not record, store, or sell your video or audio streams. Your conversations disappear the moment the session ends.</li>
+          <li><strong>One-Click Report:</strong> Every session has a prominently placed report button. Reports are actioned by our moderation team within minutes, 24/7.</li>
+          <li><strong>IP-Level Bans:</strong> Violators are permanently IP-banned. Repeat offenders face device-level blocks.</li>
+          <li><strong>Transparent Community Guidelines:</strong> We publish clear, plain-language rules. No legal jargon that hides what we actually do.</li>
+          <li><strong>Encrypted Signaling:</strong> All connection handshakes are TLS-encrypted. We never see your private communications.</li>
+        </ul>
+        <p>Read our full <a href="safety.html" style="color: var(--gold-primary);">Safety Guide</a> to understand exactly how we keep LAMAKA a safe space for all users.</p>
+      </div>
+
+      <div class="article-section">
+        <h2>LAMAKA as an <span>Omegle Alternative</span></h2>
+        <p>Since the discontinuation of Omegle in late 2023, millions of users have been searching for a high-quality replacement. Searches for <strong>"Omegle alternative"</strong>, <strong>"random video chat free"</strong>, and <strong>"talk to strangers online"</strong> have skyrocketed. LAMAKA was built specifically to fill this void — and to do it better than Omegle ever did.</p>
+        <p>We offer everything Omegle promised — instant random connections, text and video chat, global reach — and add what it sorely lacked: a premium interface, robust safety features, smooth mobile experience, and a stable, well-funded platform that won't disappear overnight.</p>
+        <p>If you've been Googling "best Omegle alternative 2026," you've found it. Welcome to the herd.</p>
+      </div>
+
+      <div class="cta-block">
+        <h2>Ready to Meet Your Next Stranger?</h2>
+        <p>Join millions of users having real, spontaneous conversations every day on LAMAKA.</p>
+        <a href="chat.html" class="btn btn-gold-filled" style="font-size:16px; padding: 14px 40px;">START CHATTING FREE →</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="static-footer">
+  <div class="container">
+    <p style="margin-bottom:12px;">© 2026 LAMAKA Inc. All rights reserved.</p>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="safety.html">Safety</a>
+    <a href="faq.html">FAQ</a>
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</footer>
+
+</body>
+</html>

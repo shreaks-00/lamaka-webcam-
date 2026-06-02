@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAMAKA - Live Random Video Chat</title>
+  <meta name="description" content="Random video chat with people all around the world. Only verified profiles and no sign up needed! Join us now.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "LAMAKA",
+    "operatingSystem": "WebBrowser",
+    "applicationCategory": "SocialNetworkingApplication",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "89234"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Particle Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <div id="landing-view">
+    <!-- Header Navigation -->
+    <header class="app-header">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="icon.png" alt="LAMAKA Logo" class="logo-svg">
+        <span class="logo-text">LAMAKA</span>
+      </div>
+
+      <nav class="nav-links" style="align-items: center;">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#simulator-section" class="nav-link">Lama here</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#testimonials" class="nav-link">FAQ</a>
+        <button id="navStartChatBtn" class="btn btn-gold-filled" style="padding: 8px 18px; font-size: 12px; margin-left: 10px;" onclick="window.location.href='login.html'">LOGIN</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">FIND YOUR HERD.<br><span class="gold-gradient-text">START THE CHAT.</span></h1>
+        <p class="hero-subtitle">LAMAKA is your destination for meaningful connections and engaging conversations. Discover, connect, and thrive.</p>
+        <div class="hero-actions">
+            <button id="heroStartChatBtn" class="btn btn-gold-large pulse-effect" style="border:none; cursor:pointer;" onclick="window.location.href='signup.html'">START CHATTING</button>
+          <span class="action-subtext">Already have an account? <a href="login.html" class="signup-link">Login here</a></span>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <div class="glow-bg"></div>
+        <img src="assets/lama_mascot.png" alt="LAMAKA Mascot" class="hero-mascot-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform In Action / Live Simulator Section -->
+  <section id="simulator-section" class="simulator-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">MEET YOUR NEXT <span class="gold-gradient-text">CONNECTION</span></h2>
+        <p class="section-desc">Join millions of LAMA members worldwide. One click to start — no account, no downloads, just real conversations.</p>
+      </div>
+
+      <!-- Hero Landing Image -->
+      <div class="landing-image-wrapper">
+        <div class="landing-image-glow"></div>
+        <img src="assets/lanfing.png" alt="LAMAKA Video Chat Preview" class="landing-preview-img">
+      </div>
+
+      <div class="simulator-cta text-center">
+        <button id="mainStartChatBtn" class="btn btn-gold-filled pulse-effect" onclick="window.location.href='signup.html'">START CHATTING NOW</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Features Grid Section -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">FEATURES DESIGNED FOR <span class="gold-gradient-text">HERD COMFORT</span></h2>
+        <p class="section-desc">We make meeting new people safe, fun, and extremely polished.</p>
+      </div>
+
+      <div class="features-grid">
+        
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient)" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <path d="M11 8v6M8 11h6"></path>
+            </svg>
+          </div>
+          <h3 class="feature-name">Detailed Matching</h3>
+          <p class="feature-text">Our advanced herd algorithm matches you with llamas that share your vibes and conversational interest. Filter by tags, languages, or specialized llama herds.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient)" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              <path d="M8 10h8M8 14h6"></path>
+            </svg>
+          </div>
+          <h3 class="feature-name">Seamless Messaging</h3>
+          <p class="feature-text">Switch between high-definition video chat and instant text messaging seamlessly. Send emojis, reactions, and keep conversations rolling naturally.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="url(#gold-gradient)" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-name">Global Community</h3>
+          <p class="feature-text">Connect with friendly llamas from all around the world. Expand your horizons, share unique cultures, and meet interesting characters without boundaries.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">HEAR FROM <span class="gold-gradient-text">OUR HERD</span></h2>
+        <p class="section-desc">Read reviews from active llamas who found their perfect conversation circle.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="user-avatar">
+              <img src="assets/llama_partner1.png" alt="Dolly">
+            </div>
+            <div class="user-info">
+              <h4 class="user-name">Dolly R.</h4>
+              <div class="user-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="testimonial-quote">"You are bound to find amazing conversations here. Met three new llamas today from across the Andes and had an awesome vibe!"</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="user-avatar">
+              <img src="assets/llama_partner2.png" alt="Al">
+            </div>
+            <div class="user-info">
+              <h4 class="user-name">Al P.</h4>
+              <div class="user-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="testimonial-quote">"I turned my camera on and had a deep talk within my first minute. The interface is premium, smooth, and feels incredibly safe."</p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="user-avatar">
+              <img src="assets/llama_partner3.png" alt="Sir Spit">
+            </div>
+            <div class="user-info">
+              <h4 class="user-name">Sir Spit-a-Lot</h4>
+              <div class="user-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="testimonial-quote">"I made quickly-knit community connections with llamas of refined taste. The gold aesthetics are spectacular!"</p>
+        </div>
+
+      </div>
+
+      <div class="since-badge-container text-center">
+        <span class="since-badge">SINCE 2026</span>
+      </div>
+
+      <div class="cta-actions" style="margin-top: 30px;">
+        <button id="bottomStartChatBtn" class="btn btn-gold-large pulse-effect" style="border:none; cursor:pointer;" onclick="window.location.href='login.html'">START CHATTING NOW</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Accordion Section -->
+  <section id="seo-content" class="seo-section">
+    <div class="container">
+      <div class="seo-accordion-container">
+        
+        <details class="seo-accordion">
+          <summary>What is LAMAKA? (The Ultimate Omegle Alternative)</summary>
+          <div class="seo-accordion-content">
+            <p>Welcome to LAMAKA, the internet's fastest-growing and most premium <strong>free random video chat</strong> platform. Since the closure of classic platforms, users worldwide have been searching for a high-quality <strong>Omegle alternative</strong> that doesn't compromise on safety, aesthetics, or speed. LAMAKA fills that void by offering lightning-fast, peer-to-peer web cam chat with strangers online. Our proprietary matching algorithm connects you with like-minded individuals globally in under three seconds.</p>
+            <p>Whether you want to <em>talk to strangers online</em>, practice a new language, or just make friends, LAMAKA provides a seamless, immersive full-screen experience. You don't need to download any sketchy software or plugins—our platform works entirely in your modern web browser (Chrome, Safari, Firefox, Edge). Plus, with advanced filtering options, you can choose exactly who you want to meet. Join millions of users on the best <strong>random video chat app of 2026</strong>.</p>
+          </div>
+        </details>
+
+        <details class="seo-accordion">
+          <summary>How to Talk to Strangers Safely Online</summary>
+          <div class="seo-accordion-content">
+            <p>Safety is our top priority. When you use a <strong>free webcam chat online</strong>, you want to ensure your data and identity are protected. LAMAKA utilizes end-to-end encryption for all video streams, meaning your private conversations stay private. We do not record or store your video feeds on our servers. As the premier <strong>anonymous chat site</strong>, we allow you to connect without creating an account or providing personal details.</p>
+            <p>To stay safe while using any <em>stranger cam chat</em>, remember the golden rules: never share your real name, address, or financial information. Utilize our built-in reporting and blocking tools if you encounter anyone violating our community guidelines. Our AI-driven moderation tools actively scan for inappropriate behavior, making LAMAKA the safest <strong>random video chat</strong> space on the web.</p>
+          </div>
+        </details>
+
+        <details class="seo-accordion">
+          <summary>Why is LAMAKA the Best Web Cam Chat in 2026?</summary>
+          <div class="seo-accordion-content">
+            <p>We built LAMAKA from the ground up to solve the biggest problems with old-school chat roulette sites. While others suffer from constant lagging, intrusive ads, and bot-filled rooms, LAMAKA offers a pristine, gold-themed interface that prioritizes the user experience. Our <strong>video chat room</strong> architecture uses modern WebRTC technology for crystal-clear, zero-latency 1080p streaming.</p>
+            <p>Furthermore, our "Herd Matching" system categorizes users intelligently. Whether you are looking for a casual chat, a deep conversation, or a fun interaction with our simulated "Drama Llamas," you are always one click away from an engaging connection. It's not just a <em>chat app</em>; it's a vibrant, global community.</p>
+          </div>
+        </details>
+
+        <details class="seo-accordion">
+          <summary>Is LAMAKA a Free Random Video Chat App?</summary>
+          <div class="seo-accordion-content">
+            <p>Yes, absolutely! LAMAKA is a 100% <strong>free random video chat app</strong>. There are no hidden fees, no premium subscriptions to unlock basic features, and no credit card required. We believe that connecting with people around the world should be accessible to everyone. You get instant access to high-quality <strong>live video chat</strong> with strangers completely for free.</p>
+          </div>
+        </details>
+
+        <details class="seo-accordion">
+          <summary>How Do I Start Chatting with Strangers?</summary>
+          <div class="seo-accordion-content">
+            <p>Getting started on LAMAKA is incredibly simple. You don't need to download any software or register for an account. Just click the "Start Chatting" button, grant browser permissions for your camera and microphone, and our algorithm will instantly pair you with a random stranger. It's the fastest way to <strong>meet new people online</strong> and dive into a <strong>stranger video call</strong>.</p>
+          </div>
+        </details>
+
+        <details class="seo-accordion">
+          <summary>Can I Filter Who I Match With?</summary>
+          <div class="seo-accordion-content">
+            <p>Yes. While the core experience is a <strong>random chat with strangers</strong>, LAMAKA provides essential filtering options. You can use our gender filter to specify whether you want to match with guys, girls, or everyone. This helps tailor your <strong>stranger cam</strong> experience to your preferences, making every connection more meaningful.</p>
+          </div>
+        </details>
+
+        <details class="seo-accordion">
+          <summary>Does LAMAKA Work on Mobile Phones?</summary>
+          <div class="seo-accordion-content">
+            <p>Definitely! LAMAKA is fully optimized for mobile browsers. You don't need to download an app from the App Store or Google Play. Whether you're on an iPhone or an Android device, simply visit our website to enjoy a seamless <strong>mobile video chat</strong> experience. Talk to strangers on the go with the same crystal-clear video quality.</p>
+          </div>
+        </details>
+
+        <details class="seo-accordion">
+          <summary>What Makes LAMAKA Different from Chatroulette or Shagle?</summary>
+          <div class="seo-accordion-content">
+            <p>LAMAKA represents the next generation of <strong>chat roulette alternatives</strong>. Older platforms like Chatroulette, Shagle, or Emerald Chat often struggle with outdated designs, slow connections, and poor moderation. LAMAKA offers a luxurious, dark-themed UI, lightning-fast WebRTC connections, and robust AI moderation, ensuring a far superior and safer <strong>webcam chat</strong> environment.</p>
+          </div>
+        </details>
+
+        <details class="seo-accordion">
+          <summary>Is My Chat Truly Anonymous?</summary>
+          <div class="seo-accordion-content">
+            <p>Yes, LAMAKA is a strictly <strong>anonymous video chat</strong> platform. We do not ask for your name, email, or any personal details. Your identity remains completely private unless you choose to share information with your chat partner. We strongly advise users to maintain their anonymity to ensure a safe and enjoyable <strong>anonymous chat</strong> experience.</p>
+          </div>
+        </details>
+
+        <details class="seo-accordion">
+          <summary>Can I Text Chat Instead of Video Chat?</summary>
+          <div class="seo-accordion-content">
+            <p>While LAMAKA specializes in <strong>live video chat</strong>, we understand that not everyone wants to be on camera all the time. Our platform includes a fully functional text chat interface alongside the video feed. You can easily communicate via text, use emojis, and enjoy a rich <strong>chat room</strong> experience even if you decide to mute your mic or disable your camera.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  </div> <!-- End #landing-view -->
+
+  <!-- SEO & Content Section -->
+  <section id="seo-content" class="seo-section">
+    <div class="container">
+      <div class="seo-header text-center">
+        <h2 class="seo-title">LAMAKA: Free, Online, Random Video Chat Platform</h2>
+        <p class="seo-intro">Meeting people online does not have to be complicated. No profile to build, no waiting for replies. You open LAMAKA, allow your camera, tap Start, and within seconds a real person appears on screen. Most platforms in the random video chat category make the same promises—instant connection, anonymous sessions, free access, real people—but the reality is where most of them disappoint: bots flooding the matching pool, hidden paywalls, weak moderation, and gender filters that do not actually verify anyone. LAMAKA was built to solve those problems. LAMAKA delivers the format at its most genuine: real people, verified before they ever appear in your match queue, no registration required, and access explained clearly rather than hidden in fine print. No registration. No download required. No daily cap, no paywall on the first session, no reason to hesitate. Just a camera and a tap.</p>
+      </div>
+
+      <div class="seo-grid">
+        <div class="seo-card">
+          <h3>What Is Random Video Chat? Talk to Strangers by Video Call</h3>
+          <p>Random video chat is a live, one-on-one video connection between two people who have never met before. A platform matches them automatically based on availability and preferences. No scheduled call, no prior relationship, no profile needed. A face, a camera, and a real-time conversation begin the moment you tap a button. Most online communication fails to solve one basic problem: text-based interaction is slow and indirect. When you message someone on a social platform or dating app, you exchange carefully edited versions of yourselves — selected photos, rehearsed replies. The real person stays hidden until much later. A random video call puts you face to face instantly. You get the same impression you would get meeting someone in person: expression, energy, how they carry a conversation. Within sixty seconds you know if there is somewhere worth going. Speed and authenticity explain why the format attracts a large, loyal audience even as text-based social media fragments in every direction.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>How LAMAKA Works: From One Tap to a Live Video Call</h3>
+          <p>LAMAKA keeps the experience as frictionless as possible. You open LAMAKA with nothing to fill in — no username to pick, no email to verify, no profile photo to upload. You allow camera access, set any matching preferences (including a gender filter to connect with girls or boys), and tap Start. LAMAKA's matching system finds you a verified real person in seconds and the session begins. This matters more than most users realize. The signup barrier on competing platforms is not just an inconvenience — it filters who uses the platform entirely. Users who want low-commitment, no-record social interaction do not want to create an account — they want to talk and move on. LAMAKA's no-registration approach attracts exactly this kind of user, shaping the culture and quality of who you meet. One thing LAMAKA does not do: store your video calls. Once a session ends, the connection is permanently closed and no recording is kept. You remain anonymous to the people you meet. No personal information is shared with other users during a call. Anonymity is a deliberate design choice, not an afterthought.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>What Makes a Random Video Chat App Worth Using?</h3>
+          <p>Not every video chat app delivers on its promises. The features that separate platforms worth your time from those wasting it include: Verified Profiles — AI-powered real-person detection before matching, ensuring the people you meet are actual humans and not bots; Gender Filter — reliable matching with women specifically (without it, most connections default to men); Free Access Model — fully transparent about what is free versus paid, with no surprise paywalls mid-session; Content Moderation — proactive rather than reactive, making the platform welcoming for real women; No Signup Required — instant access with zero registration friction; Mobile Availability — iOS and Android apps, not desktop-only; Connection Quality — fast matching and a stable video stream. LAMAKA performs well across all these areas, and profile verification is where the gap between LAMAKA and other platforms is most significant.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>LAMAKA vs. Omegle, Chatrandom, Chatki, Pink, and 1v1</h3>
+          <p>The random video chat space has plenty of platforms. LAMAKA offers AI-powered verified profiles, a gender filter, AI moderation, free access, iOS and Android support, and no signup required. Omegle had no verification, no gender filter, no moderation, free access, and no app — it shut down in November 2023. Chatrandom has no verification, a partial gender filter, limited moderation, free access, and its iOS app was removed in 2025. Chatki has no verification, a premium gender filter, limited moderation, restricted free access, and a daily match cap on its free tier. Pink Video Chat has unspecified verification, premium location-based filtering, limited moderation, and free access with premium location matching. 1v1 has no verification, no gender filter, limited moderation, free access, and consistently weak moderation overall.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>LAMAKA Is Free: What You Need to Know Before Starting</h3>
+          <p>LAMAKA is free to use. The core experience costs nothing: no account required, no session time limits, and no match cap on the base tier. This is a real distinction from most of the random video chat category, where "free" means free until you want the filter, the gender match, or the longer session that makes the platform actually usable. On LAMAKA, the free experience includes everything that matters: starting a session, matching with real verified users, and having a live conversation without a clock cutting you off. No setup cost, no paywall on the gender filter, no countdown pressuring you to upgrade. What is free on LAMAKA: opening the app and starting a video call with no account and no payment; random matching with verified real users including gender-preferenced matching; no session time limit on the core experience; no daily match cap. The difference between LAMAKA and platforms using "free" loosely is immediate. You are not racing toward a match cap. You are not discovering the gender filter you needed sits behind a paywall. You open the app, set your preferences, and you are in a real conversation.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>How to Start a Free Video Call on LAMAKA in 4 Steps</h3>
+          <p>Getting into your first session takes under two minutes. Step 1: Open LAMAKA at lamaka.live or download the app. LAMAKA is available on iOS and Android with no registration required. Enable your camera when prompted — this is the only setup step. Step 2: Check the home screen for current offers. When you first open LAMAKA, the home screen displays any available promotions or features worth reviewing before you begin. Step 3: Set your matching preferences. Use the gender filter to match with girls. Regional preferences may also be available — check the preferences panel before starting. Step 4: Tap Start. LAMAKA connects you with a verified real person based on your preferences within seconds. You are now in a live random video call. No waiting room, no loading screen. If the first match does not feel right, skip immediately. The next one is seconds away. Start your first free video call at LAMAKA today.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>Live Video Chat with Girls: How LAMAKA Handles the Experience</h3>
+          <p>For users specifically looking to connect with girls, the experience on LAMAKA is built around two things: a gender filter that actually delivers results and a verified user pool that includes real women.</p>
+        </div>
+
+        <div class="seo-card">
+          <h3>Anonymous Video Chat: Privacy and Safety on LAMAKA</h3>
+          <p>Anonymity in random video chat is both a feature and a responsibility. As a feature, it lowers the barrier to genuine interaction — you do not need to hand over your identity to have a real conversation. As a responsibility, it creates conditions that require strong safeguards to keep the experience valuable. Being anonymous on LAMAKA means no personal profile information is shared with the people you connect with. You do not see their name; they do not see yours. No profile page, no social graph, no visible connection history. What this does not mean: that zero data processing occurs — any live platform processes session data to maintain connections and run moderation. LAMAKA requires all users to be at least 18 years old. Privacy and safety features include: no personal profile data shared with other users; sessions not recorded or stored after the call ends; AI-powered profile verification filtering out bots before matching; one-tap block and report available at any point during a session; moderation team review of all flagged reports; strict 18+ age requirement.</p>
+        </div>
+      </div>
+
+      <div class="seo-cta text-center">
+        <h3>Start Chatting with LAMAKA Today</h3>
+        <p>Ready to connect? Start your journey with LAMAKA today.</p>
+        <button class="btn btn-gold-filled pulse-effect" onclick="document.getElementById('heroStartChatBtn').click()">START CHATTING NOW</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+  <footer class="app-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="copyright">© 2026 LAMAKA Inc. All rights reserved.</span>
+      </div>
+      <div class="footer-right">
+        <a href="about.html" class="footer-link">About Us</a>
+        <a href="safety.html" class="footer-link">Safety Guide</a>
+        <a href="faq.html" class="footer-link">FAQ</a>
+        <a href="terms.html" class="footer-link">Terms of Service</a>
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

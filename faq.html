@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ – LAMAKA Random Video Chat | All Your Questions Answered</title>
+  <meta name="description" content="Get answers to every question about LAMAKA – how random video chat works, webcam permissions, matching, safety, and more. Your complete guide to talking to strangers online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Is LAMAKA free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes, LAMAKA is 100% free. No subscription, no hidden fees, no account required."}},
+      {"@type":"Question","name":"Is LAMAKA safe for teens?","acceptedAnswer":{"@type":"Answer","text":"LAMAKA is intended for users 18 and over. We use AI moderation and community reporting to keep the platform safe."}},
+      {"@type":"Question","name":"Do I need to download an app?","acceptedAnswer":{"@type":"Answer","text":"No. LAMAKA runs entirely in your web browser. No download, no plugins required."}},
+      {"@type":"Question","name":"How does the random matching work?","acceptedAnswer":{"@type":"Answer","text":"Our Herd Algorithm randomly pairs you with another online user. You can filter by gender preference before connecting."}},
+      {"@type":"Question","name":"Is LAMAKA anonymous?","acceptedAnswer":{"@type":"Answer","text":"Yes. LAMAKA does not require any personal information. You are completely anonymous by default."}}
+    ]
+  }
+  </script>
+  <style>
+    .static-page { min-height: 100vh; padding: 120px 0 80px; }
+    .static-page .container { max-width: 860px; }
+    .page-hero { text-align: center; margin-bottom: 64px; }
+    .page-hero-eyebrow { font-family: var(--font-heading); font-size: 12px; font-weight: 700; letter-spacing: 3px; color: var(--gold-primary); text-transform: uppercase; margin-bottom: 16px; }
+    .page-hero-title { font-family: var(--font-heading); font-size: 48px; font-weight: 800; line-height: 1.15; color: var(--text-primary); margin-bottom: 20px; }
+    .page-hero-subtitle { font-size: 18px; color: var(--text-secondary); max-width: 600px; margin: 0 auto; line-height: 1.7; }
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item {
+      background: rgba(20,24,35,0.6);
+      border: 1px solid rgba(197,168,128,0.12);
+      border-radius: 14px;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+      transition: border-color 0.3s;
+    }
+    .faq-item:hover { border-color: rgba(197,168,128,0.3); }
+    .faq-item details { }
+    .faq-item summary {
+      padding: 22px 28px;
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 24px;
+      color: var(--gold-primary);
+      font-weight: 300;
+      line-height: 1;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    .faq-item details[open] summary::after { content: '−'; }
+    .faq-answer {
+      padding: 0 28px 24px;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--text-secondary);
+      border-top: 1px solid rgba(197,168,128,0.08);
+      padding-top: 20px;
+    }
+    .faq-answer p { margin-bottom: 12px; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer a { color: var(--gold-primary); }
+    .faq-category-title {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      margin: 48px 0 20px;
+    }
+    .faq-category-title:first-child { margin-top: 0; }
+    /* header/footer same as about */
+    .static-header { position: fixed; top: 0; left: 0; width: 100%; padding: 16px 0; z-index: 100; background: rgba(8,9,13,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(197,168,128,0.1); }
+    .static-header .container { max-width: 1200px; display: flex; justify-content: space-between; align-items: center; }
+    .static-header .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .static-header .logo img { width: 40px; height: 40px; object-fit: contain; }
+    .static-header .logo span { font-family: var(--font-heading); font-weight: 700; font-size: 20px; background: linear-gradient(135deg, #f7e6ce 0%, #d5bd9b 50%, #8e704a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .static-header nav { display: flex; gap: 28px; }
+    .static-header nav a { font-family: var(--font-heading); font-size: 14px; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
+    .static-header nav a:hover { color: var(--text-gold); }
+    .static-footer { background: rgba(8,9,13,0.9); border-top: 1px solid rgba(197,168,128,0.1); padding: 28px 0; text-align: center; font-size: 13px; color: var(--text-secondary); }
+    .static-footer a { color: var(--gold-primary); text-decoration: none; margin: 0 12px; }
+  </style>
+</head>
+<body>
+
+<header class="static-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="icon.png" alt="LAMAKA Logo">
+      <span>LAMAKA</span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="chat.html">Start Chatting</a>
+      <a href="faq.html">FAQ</a>
+      <a href="safety.html">Safety</a>
+    </nav>
+  </div>
+</header>
+
+<main class="static-page">
+  <div class="container">
+
+    <div class="page-hero">
+      <p class="page-hero-eyebrow">Got Questions?</p>
+      <h1 class="page-hero-title">Frequently Asked <span style="background: linear-gradient(135deg,#f7e6ce,#d5bd9b,#8e704a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Questions</span></h1>
+      <p class="page-hero-subtitle">Everything you need to know about LAMAKA — the world's most premium random video chat platform. No fluff, just answers.</p>
+    </div>
+
+    <div class="faq-list">
+
+      <p class="faq-category-title">🦙 Getting Started</p>
+
+      <div class="faq-item">
+        <details>
+          <summary>What exactly is LAMAKA?</summary>
+          <div class="faq-answer">
+            <p>LAMAKA is a free, browser-based <strong>random video chat platform</strong>. Think of it as the upgraded, premium-tier successor to platforms like Omegle and Chatroulette. You click "Start Chatting," allow your camera, and within seconds you're connected face-to-face with a real stranger from anywhere in the world.</p>
+            <p>Unlike generic Omegle alternatives, LAMAKA is built with an obsessive focus on design quality, safety, and speed. The result is a video chat experience that feels premium rather than janky.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>Is LAMAKA completely free? Any hidden costs?</summary>
+          <div class="faq-answer">
+            <p>100% free. No subscription. No premium tier. No in-app purchases. No hidden fees. LAMAKA will always be free for the core random video chat experience.</p>
+            <p>We sustain the platform through minimal, non-intrusive brand partnerships. We will never sell your data or put ads between you and your connections.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>Do I need to create an account or sign up?</summary>
+          <div class="faq-answer">
+            <p>No account, no sign up, no email address required. LAMAKA is a true <strong>anonymous chat site</strong>. You open the page, click start, and you're in. Your session is temporary and leaves no trace.</p>
+            <p>This anonymity is fundamental to our design. We believe real, candid conversations happen when you're not worried about your social media followers seeing it.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>Do I need to download anything?</summary>
+          <div class="faq-answer">
+            <p>Zero downloads required. LAMAKA is a web app that runs entirely inside your browser using WebRTC technology — the same technology powering Google Meet, Zoom web, and many other major video conferencing tools. It works on Chrome, Firefox, Safari, and Edge on both desktop and mobile.</p>
+          </div>
+        </details>
+      </div>
+
+      <p class="faq-category-title">📷 Camera & Microphone</p>
+
+      <div class="faq-item">
+        <details>
+          <summary>Why does LAMAKA need camera and microphone access?</summary>
+          <div class="faq-answer">
+            <p>LAMAKA is a <strong>live webcam chat</strong> platform, so your camera and microphone are essential for the experience. When you click "Allow" on the browser permission prompt, your device's camera and mic stream is shared peer-to-peer directly with your matched partner.</p>
+            <p>Critically: your video stream is never routed through LAMAKA's servers. We never see, record, or store your video. It goes directly from your browser to your partner's browser using WebRTC encryption.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>My camera isn't working. How do I fix it?</summary>
+          <div class="faq-answer">
+            <p>Camera issues are almost always a browser permissions problem. Here's how to fix it:</p>
+            <p><strong>Chrome:</strong> Click the camera icon in the address bar → select "Always allow lamaka.chat to access camera and microphone" → reload the page.</p>
+            <p><strong>Safari:</strong> Go to Safari → Settings → Websites → Camera, and set LAMAKA to "Allow."</p>
+            <p><strong>Firefox:</strong> Click the camera/lock icon in the address bar → clear the blocked permission → reload.</p>
+            <p>If you're on a laptop and the above doesn't work, check your operating system camera privacy settings. On Windows, go to Settings → Privacy → Camera and ensure browser access is enabled.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>Can I use LAMAKA without a camera?</summary>
+          <div class="faq-answer">
+            <p>Yes! You can choose "Simulate Without Camera" when prompted. You'll still be matched with live partners and can chat via text. Some partners may choose not to connect with camera-off users depending on their preference, but many text-only sessions happen every day on LAMAKA.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>How do I turn my mic on and off during a chat?</summary>
+          <div class="faq-answer">
+            <p>There is a dedicated microphone toggle button in the video panel on your local camera feed (bottom panel in the full-screen view). Click the microphone icon to mute yourself — the icon turns red when muted. Click again to unmute. This works in real-time during any live session.</p>
+          </div>
+        </details>
+      </div>
+
+      <p class="faq-category-title">🌍 Matching & Connecting</p>
+
+      <div class="faq-item">
+        <details>
+          <summary>How does the random matching algorithm work?</summary>
+          <div class="faq-answer">
+            <p>Our "Herd Algorithm" maintains a live pool of all currently available users. When you hit "Start Chatting," you're matched with a random user from that pool within seconds. The algorithm considers your gender preference filter (All, Girls Only, Guys Only) if you've set one.</p>
+            <p>Future versions will include interest-based matching, where you can enter tags like "music," "travel," or "coding" to be matched with compatible strangers.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>Can I choose what country my matches come from?</summary>
+          <div class="faq-answer">
+            <p>Currently, matching is fully global — you can be connected with anyone from our 140+ supported countries. Country-specific filtering is on our roadmap for a future update. LAMAKA's global reach is actually one of its biggest strengths; many users report that their most memorable conversations have been with people from countries they never expected.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>What does the "NEXT" button do?</summary>
+          <div class="faq-answer">
+            <p>The NEXT button instantly ends your current session and begins searching for a new random connection. There's no penalty for skipping. You can NEXT as many times as you like until you find someone you want to talk to.</p>
+          </div>
+        </details>
+      </div>
+
+      <p class="faq-category-title">🛡️ Safety & Privacy</p>
+
+      <div class="faq-item">
+        <details>
+          <summary>Is LAMAKA safe to use?</summary>
+          <div class="faq-answer">
+            <p>LAMAKA employs multiple layers of protection. Our AI moderation system scans sessions for policy violations in real-time. Our one-click report button allows any user to instantly flag a bad actor. Violators are IP-banned and their device signatures are blocked from the platform permanently.</p>
+            <p>That said, as with any platform where strangers meet, common sense is your best tool. Never share personal information like your real name, address, school, or phone number with a stranger on LAMAKA. Read our full <a href="safety.html">Safety Guide</a> for more detailed advice.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>Does LAMAKA record or save my video chats?</summary>
+          <div class="faq-answer">
+            <p>Absolutely not. LAMAKA does not record, store, or process your video or audio streams in any way. All video is transmitted peer-to-peer via WebRTC, meaning it flows directly between your browser and your partner's browser without passing through our servers. When the session ends, it's gone forever.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary>Is LAMAKA safe for minors?</summary>
+          <div class="faq-answer">
+            <p>LAMAKA is intended for users aged 18 and over. We strongly discourage minors from using the platform, as random video chat with strangers carries inherent risks for younger users. If you are a parent concerned about a child's use of LAMAKA, we recommend using browser parental controls to restrict access. Report any suspected underage activity via our report button and it will be actioned immediately.</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<footer class="static-footer">
+  <div class="container">
+    <p style="margin-bottom:12px;">© 2026 LAMAKA Inc. All rights reserved.</p>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="safety.html">Safety</a>
+    <a href="faq.html">FAQ</a>
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</footer>
+
+</body>
+</html>
