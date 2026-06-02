@@ -6,42 +6,42 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/chat.html</loc>
+    <loc>https://lamaka-webcam.vercel.app/chat</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/signup.html</loc>
+    <loc>https://lamaka-webcam.vercel.app/signup</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/login.html</loc>
+    <loc>https://lamaka-webcam.vercel.app/login</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/about.html</loc>
+    <loc>https://lamaka-webcam.vercel.app/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/faq.html</loc>
+    <loc>https://lamaka-webcam.vercel.app/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/safety.html</loc>
+    <loc>https://lamaka-webcam.vercel.app/safety</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/privacy.html</loc>
+    <loc>https://lamaka-webcam.vercel.app/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/terms.html</loc>
+    <loc>https://lamaka-webcam.vercel.app/terms</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>

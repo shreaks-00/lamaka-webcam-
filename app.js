@@ -1012,7 +1012,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const banner = document.createElement('div');
     banner.className = 'cookie-banner';
     banner.innerHTML = `
-      <p class="cookie-text">We use cookies to enhance your experience, save your preferences, and keep the herd safe. By continuing to use LAMAKA, you agree to our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</p>
+      <p class="cookie-text">We use cookies to enhance your experience, save your preferences, and keep the herd safe. By continuing to use LAMAKA, you agree to our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms of Service</a>.</p>
       <div class="cookie-actions">
         <button class="btn-cookie-outline" id="cookieDeclineBtn">Decline</button>
         <button class="btn-cookie-accept" id="cookieAcceptBtn">Accept</button>
