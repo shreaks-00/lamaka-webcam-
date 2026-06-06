@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lamaka-webcam.vercel.app/</loc>
+    <loc>https://lamaka-videochat.vercel.app/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/chat</loc>
+    <loc>https://lamaka-videochat.vercel.app/chat</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/signup</loc>
+    <loc>https://lamaka-videochat.vercel.app/signup</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/login</loc>
+    <loc>https://lamaka-videochat.vercel.app/login</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/about</loc>
+    <loc>https://lamaka-videochat.vercel.app/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/faq</loc>
+    <loc>https://lamaka-videochat.vercel.app/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/safety</loc>
+    <loc>https://lamaka-videochat.vercel.app/safety</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/privacy</loc>
+    <loc>https://lamaka-videochat.vercel.app/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://lamaka-webcam.vercel.app/terms</loc>
+    <loc>https://lamaka-videochat.vercel.app/terms</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>

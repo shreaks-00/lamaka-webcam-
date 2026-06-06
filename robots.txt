@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lamaka-webcam.vercel.app/sitemap.xml
+Sitemap: https://lamaka-videochat.vercel.app/sitemap.xml
